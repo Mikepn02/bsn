@@ -19,5 +19,8 @@ EXPOSE 8088
 ENV DB_URL=jdbc:postgresql://postgres-sql-bsn/book_social_network
 ENV ACTIVE_PROFILE=${PROFILE}
 ENV JAR_VERSION=${APP_VERSION}
+ENV EMAIL_HOSTNAME=missing_hostname
+ENV EMAIL_USER_NAME=missing_username
+ENV EMAIL_PASSWORD=missing_password
 
 CMD java -jar -Dspring.profiles.active=${ACTIVE_PROFILE} -Dspring.datasource.url=${DB_URL}  book-network-${JAR_VERSION}.jar

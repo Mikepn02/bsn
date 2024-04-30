@@ -15,10 +15,10 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
   mail:
-    host: smtp.gmail.com
+    host: ${EMAIL_HOSTNAME}
     port: 465
-    username: nzaberamikepeter@gmail.com
-    password: tyfhhjellbgoxudn
+    username: ${EMAIL_USER_NAME}
+    password: ${EMAIL_PASSWORD}
     properties:
       mail:
         smtp:
@@ -39,6 +39,9 @@ application:
     mailing:
       frontend:
         activation-url: http://localhost:4200/activate-account
+    cors:
+      origins: http://localhost:4200,http://localhost:8080
+
     file:
       uploads:
         photos-output-path: ./uploads
